@@ -10,9 +10,14 @@
   /* end reset */
 
   /* set main to 100% of screean*/
+#app{
+  display: flex;
+  flex-direction: column;
+}
+
   main{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
   }
 
@@ -208,6 +213,7 @@
     height: 80%;
     align-items: center;
     padding: 20px;
+    margin-bottom: 50px;
   }
 
   .box{
@@ -333,8 +339,6 @@ opacity: 0;
 
   /* footer */
   footer{
-    position: fixed;
-    bottom: 0;
     background: #ffffff38;
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
@@ -344,6 +348,7 @@ opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -51px;
   }
 
   footer img{
