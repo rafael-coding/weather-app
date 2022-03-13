@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+    <TimeBackground/>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <section>
+      <BoxContent/>
+    </section>
+  </main>
+  <FooterComponent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import components
+import TimeBackground from './components/TimeBackground.vue'
+import BoxContent from './components/BoxContent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TimeBackground,
+    BoxContent,
+    FooterComponent
+  },
+  data(){
+    return {
+      // api weather
+      api_key: '8ee5579196e0ebc8f2a28c5e7ea6a397',
+      url_base: 'https://api.openweathermap.org/data/2.5/',
+      query: '',
+      weather: {},
+    }
+  },
+
+  mounted(){
+
   }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ @import '../src/assets/app.css';
+
 </style>

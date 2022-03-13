@@ -1,0 +1,354 @@
+  /*reset css*/
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 3px rgba(0,0,0,0.25);
+  }
+  /* end reset */
+
+  /* set main to 100% of screean*/
+  main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* logo */
+ main img{
+   height: 50px;
+   width: 50px;
+   margin: 20px 0 0 20px;
+ }  
+
+  /* full body time */
+  .afternoon, .morning, .night{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+   /* animated morning */
+  .morning{
+    background: linear-gradient( to top right,rgba(156,204,101 ,1) 0%,
+    rgba(38,198,218 ,1) 50%);
+    box-shadow: 1px 1px 30px rgb(38 198 218);
+    overflow: hidden;
+  }
+
+  .morning li{
+    position: absolute;
+    list-style: none;
+    width: 2px;
+    height: 7px;
+    border-radius: 10%;
+    background-color: #eee;
+    opacity: 0;
+    animation: fall 3s infinite linear;
+    transform: rotate(25deg);
+  }
+
+  .morning li:nth-child(1){
+    top: 10%;
+    left: 95%;
+  }
+
+  .morning li:nth-child(2){
+    top: 5%;
+    left: 83%;
+    animation-delay: 0.3s;
+  }
+  
+  .morning li:nth-child(3){
+    top: 4%;
+    left: 87%;
+    animation-delay: 0.6s;
+  }
+
+  .morning li:nth-child(4){
+    top: 15%;
+    left: 70%;
+    animation-delay: 1s;
+  }
+
+  .morning li:nth-child(5){
+    top: 10%;
+    left: 75%;
+  }
+
+  .sun-morning, .sun{
+    z-index: -1;
+    position: absolute;
+    bottom: -3%;
+    left: -3%;
+    background: linear-gradient( to bottom left, rgba(255,235,59,1) 0%, rgba(249,168,37 ,1) 90%);
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 30px rgb(255 160 0);
+    animation: inex 3s infinite linear;
+  }
+
+  /* end animated morning */
+
+  /* animated afternoon */
+  .afternoon{
+    background:linear-gradient( to top right, rgba(255,87,34,1) 0%,
+	rgba(251,140,0 ,1) 100%);
+	box-shadow: 1px 1px 30px rgba(255,111,0 ,1);
+  }
+
+  .sunx{
+    z-index: -1;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    opacity: .2;
+  }
+
+  .sun{
+    top: 20%;
+    left: 65%;
+  }
+  /* end animated afternoon */
+
+  /* animated night */
+  .night{
+    background: linear-gradient( to bottom right,rgba(63,81,181,1) 0%,
+    rgba(171,71,188 ,1) 70%);
+    box-shadow: 1px 1px 30px rgb(81 45 168);
+  }
+
+  .moon{
+    position: absolute;
+    top: 3%;
+    left: 65%;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: rgba(255,241,118 ,1);
+    box-shadow: 1px 1px 30px rgb(224 224 224);
+}
+
+.spot1, .spot2 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #777;
+}
+
+.spot2 {
+  top: 15%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+}
+
+.night li {
+  position: absolute;
+  list-style: none;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.night li:nth-child(1) {
+  top: 30%;
+  left: 65%;
+}
+
+.night li:nth-child(2) {
+  top: 35%;
+  left: 53%;
+}
+.night li:nth-child(3) {
+  opacity: 0;
+  top: 20%;
+  left: 75%;
+  width: 2px;
+  height: 2px;
+  animation: meteor 1.5s infinite linear;
+  animation-delay: 0.6s;
+}
+.night li:nth-child(4) {
+  top: 5%;
+  left: 50%;
+}
+.night li:nth-child(5) {
+  opacity: 0;
+    top: 20%;
+    left: 55%;
+    width: 1px;
+    height: 15px;
+    animation: meteor 1.5s infinite linear;
+}
+
+
+  /* end animated night */
+
+  /* section to show the content*/
+  section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .box{
+    height: max-content;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    background: ( to top right, rgba(255,87,34,1) 0%,
+	rgba(251,140,0 ,1) 100%);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1{
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
+
+  h2{
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  h3{
+     font-size: clamp(1.3rem, 5vw, 2.5rem);
+  }
+
+  p{
+    font-size: clamp(.8rem, 2vw, 1rem);
+    font-style: italic;
+  }
+
+  input{
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background: #ffffff38;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px 0 15px 0;
+    text-shadow: none;
+  }
+
+  input::placeholder{
+    color: #ffffff;
+  }
+
+  span{
+      font-size: clamp(2rem, 5vw, 5rem);
+      padding: 20px;
+      background: rgb(255 255 255 / 30%);
+      border-radius: 10px;
+      margin: 30px 0 15px 0;
+      backdrop-filter: blur( 20px );
+      -webkit-backdrop-filter: blur( 20px );
+      font-weight: bold;
+      width: max-content;
+  }
+
+  /* end section */
+
+  /* animations */
+  /* star morning */
+  @keyframes fall {
+    10%
+    {
+      opacity:0.8;
+    }
+    
+      50% {
+        opacity:1;
+      transform: translate(-10px,30px);
+    
+      }
+      100%
+      {
+        transform: translate(-25px,70px);
+    
+        
+      }
+    }
+
+    /* end star morning */
+  /* sun */
+  @keyframes inex {
+	50% {
+	opacity: 0.4;
+
+	}
+	60%
+	{
+		opacity: 1;
+	}
+}
+
+/* end sun */
+
+/* meteor night */
+@keyframes meteor
+{
+
+10%
+{opacity: 1;
+}
+80%	
+{
+left:10%;
+top:75%;
+opacity: 0;
+}
+}
+  /* end animations */
+
+  /* footer */
+  footer{
+    position: fixed;
+    bottom: 0;
+    background: #ffffff38;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer img{
+    width: 20px;
+    height: auto;
+    margin: 5px 0 0 10px;
+  }
+  /* end footer  */
