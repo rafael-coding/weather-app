@@ -3,7 +3,7 @@
       <h1>{{messageBuilder()}}</h1>
         <input v-model="query
         " type="text"
-         placeholder="Search..."
+         placeholder="Search a city..."
          @keypress="fetchWeather"
          />
          <div class="weather-content" v-if="weather.main != undefined">
